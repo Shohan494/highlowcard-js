@@ -1,4 +1,4 @@
-var numbers = [2,3,4,5,6,7,8,9];
+var numbers = [2,3,4,5,6,7,8,9,10,"J","Q","K","A"];
 var suits = ['hearts', 'spades', 'clubs', 'diamonds'];
 
 var pickedNumber1 = numbers[Math.floor(Math.random()*numbers.length)];
@@ -12,8 +12,6 @@ var p1Card = pickedSuit1 + " " + pickedNumber1
 var p2Card = pickedSuit2 + " " +  pickedNumber2
 
 console.log("Before checking for matched card");
-
-
 console.log("Player 1: ", p1Card);
 console.log("Player 2: ", p2Card);
 console.log("\n");
@@ -37,12 +35,13 @@ console.log("After checking for matched card");
 console.log("Player 1: ", p1Card);
 console.log("Player 2: ", p2Card);
 
-console.log("\n**Result**\n");
+console.log("\n** Result **\n");
 
-if (pickedNumber1 > pickedNumber2) {
+if (numbers.indexOf(pickedNumber1) > numbers.indexOf(pickedNumber2)) {
   console.log("Player 1 wins");
-} else if (pickedNumber1 == pickedNumber2) {
+} else if (numbers.indexOf(pickedNumber1) == numbers.indexOf(pickedNumber2)) {
   console.log("Duo, It's a tie");
 } else {
   console.log("Player 2 wins");
 }
+
